@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Análisis Estructural - Cubierta Metálica Cajamarca</title>
+    <title>Análisis Estructural - Cubierta Metálica </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -692,8 +692,8 @@
     <!-- Cabecera mejorada -->
     <header>
         <div class="header-content">
-            <h1>ANÁLISIS ESTRUCTURAL : DOMO  METÁLICO REAL PLAZA </h1>
-            <p>Proyecto desarrollado en Cajamarca - Análisis completo utilizando SAP 2000</p>
+            <h1>ANÁLISIS ESTRUCTURAL : DOMO METÁLICO REAL PLAZA</h1>
+            <p>Proyecto desarrollado en UTEC - Análisis completo utilizando SAP 2000</p>
             <p class="unidades">Unidades: Toneladas (Ton) y Milímetros (mm)</p>
             
             <div class="project-info">
@@ -721,9 +721,12 @@
                 <a href="#introduccion">Introducción</a>
                 <a href="#resumen">Resumen</a>
                 <a href="#marco-teorico">Marco Teórico</a>
-                <a href="#diagramas">Diagramas</a>
-                <a href="#desplazamientos">Desplazamientos</a>
                 <a href="#reacciones">Reacciones</a>
+                <a href="#axial">Fuerzas Axiales</a>
+                <a href="#cortante">Cortante</a>
+                <a href="#momento">Momento</a>
+                <a href="#deformaciones">Deformaciones</a>
+                <a href="#desplazamientos">Desplaz. Sísmicos</a>
                 <a href="#videos">Simulaciones</a>
                 <a href="#conclusiones">Conclusiones</a>
             </div>
@@ -734,11 +737,11 @@
     <section id="introduccion" class="fade-in">
         <div class="section-title">
             <h2>Introducción</h2>
-            <p>Análisis estructural completo de una cubierta metálica desarrollada en Cajamarca, Perú</p>
+            <p>Análisis estructural completo de una cubierta metálica desarrollada en UTEC, Perú</p>
         </div>
         
         <div class="content-card">
-            <p>Este informe presenta el análisis estructural de una cubierta metálica desarrollada para las condiciones específicas de Cajamarca. El proyecto incluye el estudio de cargas estáticas (muerta y viva), combinaciones de servicio, y análisis dinámico sísmico basado en el espectro de aceleraciones local.</p>
+            <p>Este informe presenta el análisis estructural de una cubierta metálica desarrollada para las condiciones específicas de Cajamarca (analisis sismico) . El proyecto incluye el estudio de cargas estáticas (muerta y viva), combinaciones de servicio, y análisis dinámico sísmico basado en el espectro de aceleraciones local.</p>
             
             <p>El modelado y análisis se realizó utilizando el software SAP 2000, referencia mundial en análisis estructural. Se consideraron todos los elementos estructurales, sus conexiones y el comportamiento del sistema completo bajo diferentes condiciones de carga.</p>
             
@@ -905,206 +908,104 @@
         </div>
     </section>
     
-    <!-- Sección de Diagramas de Esfuerzos -->
-    <section id="diagramas" class="fade-in">
+    <!-- Sección de Reacciones -->
+    <section id="reacciones" class="fade-in">
         <div class="section-title">
-            <h2>Diagramas de Esfuerzos</h2>
-            <p>Análisis de fuerzas cortantes, momentos y fuerzas axiales</p>
+            <h2>Reacciones en Apoyos</h2>
+            <p>Análisis de fuerzas en los apoyos bajo diferentes condiciones de carga</p>
         </div>
         
-        <!-- Diagramas de Cortante -->
         <div class="content-card">
-            <h3>Diagramas de Cortante</h3>
             <div class="image-grid">
                 <div class="image-card">
                     <div class="image-container">
-                        <img src="cortante_servicio.jpg" alt="Cortante de servicio">
-                        <button class="fullscreen-btn" onclick="openFullscreen('cortante_servicio.jpg')">
+                        <img src="reacciones_muerta.jpg" alt="Reacciones muerta">
+                        <button class="fullscreen-btn" onclick="openFullscreen('reacciones_muerta.jpg')">
                             <i class="fas fa-expand"></i>
                         </button>
                     </div>
-                    <div class="image-caption">Diagrama de fuerzas cortantes - Carga de servicio</div>
+                    <div class="image-caption">Reacciones - Carga muerta</div>
                     <div class="analysis-details">
                         <h4>Análisis Técnico</h4>
                         <table class="data-table">
                             <tr>
                                 <td>Descripción:</td>
-                                <td>Diagrama de fuerzas cortantes bajo combinación de cargas de servicio</td>
+                                <td>Reacciones bajo carga muerta permanente</td>
                             </tr>
                             <tr>
-                                <td>Máximo:</td>
-                                <td class="critical-value">+19.64 kN</td>
-                            </tr>
-                            <tr>
-                                <td>Mínimo:</td>
-                                <td class="critical-value">-68.37 kN</td>
+                                <td>Valor máximo:</td>
+                                <td class="critical-value">3.99</td>
                             </tr>
                         </table>
-                        <div class="technical-analysis">
-                            <p><strong>Características:</strong> Distribución de cortantes con cambios bruscos debido a la presencia del anillo central del domo. Mayor concentración en el apoyo derecho.</p>
-                        </div>
                     </div>
                 </div>
                 
                 <div class="image-card">
                     <div class="image-container">
-                        <img src="cortante_viva.jpg" alt="Cortante viva">
-                        <button class="fullscreen-btn" onclick="openFullscreen('cortante_viva.jpg')">
+                        <img src="reacciones_viva.jpg" alt="Reacciones viva">
+                        <button class="fullscreen-btn" onclick="openFullscreen('reacciones_viva.jpg')">
                             <i class="fas fa-expand"></i>
                         </button>
                     </div>
-                    <div class="image-caption">Diagrama de fuerzas cortantes - Carga viva</div>
+                    <div class="image-caption">Reacciones - Carga viva</div>
                     <div class="analysis-details">
                         <h4>Análisis Técnico</h4>
                         <table class="data-table">
                             <tr>
                                 <td>Descripción:</td>
-                                <td>Diagrama de fuerzas cortantes bajo sobrecarga viva</td>
+                                <td>Reacciones por carga viva</td>
                             </tr>
                             <tr>
-                                <td>Máximo:</td>
-                                <td class="critical-value">+13.5 kN</td>
-                            </tr>
-                            <tr>
-                                <td>Mínimo:</td>
-                                <td class="critical-value">-52.47 kN</td>
+                                <td>Valor máximo:</td>
+                                <td class="critical-value">7.34</td>
                             </tr>
                         </table>
-                        <div class="technical-analysis">
-                            <p><strong>Características:</strong> Patrón similar al de servicio pero con menores magnitudes. Evidencia la contribución de la carga viva al cortante total.</p>
-                        </div>
                     </div>
                 </div>
                 
                 <div class="image-card">
                     <div class="image-container">
-                        <img src="cortante_axial.jpg" alt="Cortante axial">
-                        <button class="fullscreen-btn" onclick="openFullscreen('cortante_axial.jpg')">
+                        <img src="reacciones_servicio.jpg" alt="Reacciones servicio">
+                        <button class="fullscreen-btn" onclick="openFullscreen('reacciones_servicio.jpg')">
                             <i class="fas fa-expand"></i>
                         </button>
                     </div>
-                    <div class="image-caption">Combinación de efectos de cortante y axial</div>
+                    <div class="image-caption">Reacciones - Carga de servicio</div>
                     <div class="analysis-details">
                         <h4>Análisis Técnico</h4>
                         <table class="data-table">
                             <tr>
                                 <td>Descripción:</td>
-                                <td>Combinación de efectos de cortante y axial</td>
+                                <td>Reacciones de servicio (combinación de cargas)</td>
                             </tr>
                             <tr>
-                                <td>Máximo:</td>
-                                <td class="critical-value">+7.2 kN</td>
-                            </tr>
-                            <tr>
-                                <td>Mínimo:</td>
-                                <td class="critical-value">-32.83 kN</td>
+                                <td>Valor máximo:</td>
+                                <td class="critical-value">11.36</td>
                             </tr>
                         </table>
-                        <div class="technical-analysis">
-                            <p><strong>Características:</strong> Menores magnitudes que sugieren un estado de carga específico o una etapa del análisis.</p>
-                        </div>
                     </div>
+                </div>
+                
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="reacciones_general.jpg" alt="Reacciones general">
+                        <button class="fullscreen-btn" onclick="openFullscreen('reacciones_general.jpg')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="image-caption">Reacciones Generales</div>
                 </div>
             </div>
         </div>
-        
-        <!-- Diagramas de Momento -->
-        <div class="content-card">
-            <h3>Diagramas de Momento</h3>
-            <div class="image-grid">
-                <div class="image-card">
-                    <div class="image-container">
-                        <img src="momento_muerta.jpg" alt="Momento muerta">
-                        <button class="fullscreen-btn" onclick="openFullscreen('momento_muerta.jpg')">
-                            <i class="fas fa-expand"></i>
-                        </button>
-                    </div>
-                    <div class="image-caption">Distribución de momentos - Carga muerta</div>
-                    <div class="analysis-details">
-                        <h4>Análisis Técnico</h4>
-                        <table class="data-table">
-                            <tr>
-                                <td>Descripción:</td>
-                                <td>Distribución de momentos bajo carga muerta</td>
-                            </tr>
-                            <tr>
-                                <td>Máximo:</td>
-                                <td class="critical-value">+3.5 kN·m</td>
-                            </tr>
-                            <tr>
-                                <td>Mínimo:</td>
-                                <td class="critical-value">-42 kN·m</td>
-                            </tr>
-                        </table>
-                        <div class="technical-analysis">
-                            <p><strong>Características:</strong> Concentración de momentos negativos en apoyos y zonas de continuidad. Azul - momento positivo, Magenta - momento negativo máximo.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="image-card">
-                    <div class="image-container">
-                        <img src="momento_viva.jpg" alt="Momento viva">
-                        <button class="fullscreen-btn" onclick="openFullscreen('momento_viva.jpg')">
-                            <i class="fas fa-expand"></i>
-                        </button>
-                    </div>
-                    <div class="image-caption">Distribución de momentos - Carga viva</div>
-                    <div class="analysis-details">
-                        <h4>Análisis Técnico</h4>
-                        <table class="data-table">
-                            <tr>
-                                <td>Descripción:</td>
-                                <td>Distribución de momentos bajo carga viva</td>
-                            </tr>
-                            <tr>
-                                <td>Máximo:</td>
-                                <td class="critical-value">+15 kN·m</td>
-                            </tr>
-                            <tr>
-                                <td>Mínimo:</td>
-                                <td class="critical-value">-82.5 kN·m</td>
-                            </tr>
-                        </table>
-                        <div class="technical-analysis">
-                            <p><strong>Características:</strong> Mayor rango de momentos, evidenciando el efecto significativo de las cargas vivas. Azul - momento positivo, Magenta - momento negativo crítico.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="image-card">
-                    <div class="image-container">
-                        <img src="momento_servicio.jpg" alt="Momento servicio">
-                        <button class="fullscreen-btn" onclick="openFullscreen('momento_servicio.jpg')">
-                            <i class="fas fa-expand"></i>
-                        </button>
-                    </div>
-                    <div class="image-caption">Distribución de momentos - Carga de servicio</div>
-                    <div class="analysis-details">
-                        <h4>Análisis Técnico</h4>
-                        <table class="data-table">
-                            <tr>
-                                <td>Descripción:</td>
-                                <td>Momentos combinados bajo condiciones de servicio</td>
-                            </tr>
-                            <tr>
-                                <td>Máximo:</td>
-                                <td class="critical-value">+11 kN·m</td>
-                            </tr>
-                            <tr>
-                                <td>Mínimo:</td>
-                                <td class="critical-value">-60.5 kN·m</td>
-                            </tr>
-                        </table>
-                        <div class="technical-analysis">
-                            <p><strong>Características:</strong> Distribución final de momentos para el diseño estructural. Azul - momento positivo, Magenta - momento negativo.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </section>
+    
+    <!-- Sección de Fuerzas Axiales -->
+    <section id="axial" class="fade-in">
+        <div class="section-title">
+            <h2>Diagramas de Fuerza Axial</h2>
+            <p>Análisis de fuerzas de compresión y tensión en elementos estructurales</p>
         </div>
         
-        <!-- Fuerzas Axiales -->
         <div class="content-card">
             <h3>Fuerzas Axiales</h3>
             <div class="convention-box">
@@ -1203,6 +1104,218 @@
                         <div class="technical-analysis">
                             <p><strong>Análisis:</strong> Esta es la suma de las dos anteriores (Carga Muerta + Carga Viva) y representa las fuerzas axiales en condiciones normales de operación. Es la más crítica para el diseño de los elementos.</p>
                             <p><strong>Análisis del Anillo Central:</strong> Hay un cambio abrupto en las axiales en la zona central elevada. Los largos perfiles horizontales acumulan una fuerte compresión que es transferida a los elementos verticales (el "anillo" o viga de borde). Los pequeños perfiles que forman la parte superior del domo tienen una compresión muy baja, lo que indica que el anillo de borde es el encargado de absorber y redistribuir esas grandes fuerzas de compresión. Esta es una zona de alta concentración de esfuerzos y es crítica para el diseño de las conexiones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de Cortante -->
+    <section id="cortante" class="fade-in">
+        <div class="section-title">
+            <h2>Diagramas de Cortante</h2>
+            <p>Análisis de fuerzas cortantes en elementos estructurales</p>
+        </div>
+        
+        <div class="content-card">
+            <h3>Diagramas de Cortante</h3>
+            <div class="image-grid">
+                <!-- Cortante por Carga Muerta (anteriormente cortante_axial.jpg) -->
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="cortante_axial.jpg" alt="Cortante por Carga Muerta">
+                        <button class="fullscreen-btn" onclick="openFullscreen('cortante_axial.jpg')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="image-caption">Fuerzas cortantes - Carga muerta</div>
+                    <div class="analysis-details">
+                        <h4>Análisis Técnico</h4>
+                        <table class="data-table">
+                            <tr>
+                                <td>Descripción:</td>
+                                <td>Fuerza cortante debida al peso propio de la estructura</td>
+                            </tr>
+                            <tr>
+                                <td>Máximo:</td>
+                                <td class="critical-value">+0.92 t</td>
+                            </tr>
+                            <tr>
+                                <td>Mínimo:</td>
+                                <td class="critical-value">-0.88 t</td>
+                            </tr>
+                        </table>
+                        <div class="technical-analysis">
+                            <p><strong>Características:</strong> Cortante máximo en la conexión derecha con el domo central (+0.92 t) y mínimo en el apoyo exterior izquierdo (-0.88 t).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cortante por Carga Viva -->
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="cortante_viva.jpg" alt="Cortante por Carga Viva">
+                        <button class="fullscreen-btn" onclick="openFullscreen('cortante_viva.jpg')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="image-caption">Fuerzas cortantes - Carga viva</div>
+                    <div class="analysis-details">
+                        <h4>Análisis Técnico</h4>
+                        <table class="data-table">
+                            <tr>
+                                <td>Descripción:</td>
+                                <td>Fuerza cortante debida a cargas variables</td>
+                            </tr>
+                            <tr>
+                                <td>Máximo:</td>
+                                <td class="critical-value">+1.67 t</td>
+                            </tr>
+                            <tr>
+                                <td>Mínimo:</td>
+                                <td class="critical-value">-1.67 t</td>
+                            </tr>
+                        </table>
+                        <div class="technical-analysis">
+                            <p><strong>Características:</strong> Máxima cortante absoluta: -1.67 t (apoyo exterior derecho) y -1.66 t (apoyo izquierdo). Contribución adicional de cargas variables.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cortante por Carga de Servicio -->
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="cortante_servicio.jpg" alt="Cortante por Carga de Servicio">
+                        <button class="fullscreen-btn" onclick="openFullscreen('cortante_servicio.jpg')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="image-caption">Fuerzas cortantes - Carga de servicio</div>
+                    <div class="analysis-details">
+                        <h4>Análisis Técnico</h4>
+                        <table class="data-table">
+                            <tr>
+                                <td>Descripción:</td>
+                                <td>Fuerza cortante combinada para condiciones de servicio (D+L)</td>
+                            </tr>
+                            <tr>
+                                <td>Máximo:</td>
+                                <td class="critical-value">+2.54 t</td>
+                            </tr>
+                            <tr>
+                                <td>Mínimo:</td>
+                                <td class="critical-value">-2.56 t</td>
+                            </tr>
+                        </table>
+                        <div class="technical-analysis">
+                            <p><strong>Características:</strong> Caso crítico para diseño a cortante con valores máximos absolutos de -2.56 t y -2.54 t. El punto de cortante cero coincide con el máximo momento flector positivo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de Momento -->
+    <section id="momento" class="fade-in">
+        <div class="section-title">
+            <h2>Diagramas de Momento</h2>
+            <p>Análisis de momentos flectores en elementos estructurales</p>
+        </div>
+        
+        <div class="content-card">
+            <h3>Diagramas de Momento</h3>
+            <div class="image-grid">
+                <!-- Momento por Carga Muerta -->
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="momento_muerta.jpg" alt="Momento por Carga Muerta">
+                        <button class="fullscreen-btn" onclick="openFullscreen('momento_muerta.jpg')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="image-caption">Distribución de momentos - Carga muerta</div>
+                    <div class="analysis-details">
+                        <h4>Análisis Técnico</h4>
+                        <table class="data-table">
+                            <tr>
+                                <td>Descripción:</td>
+                                <td>Momentos generados por el peso propio de la estructura</td>
+                            </tr>
+                            <tr>
+                                <td>Máximo Positivo:</td>
+                                <td class="critical-value">+3027.93 ton.mm (+3.03 t.m)</td>
+                            </tr>
+                            <tr>
+                                <td>Máximo Negativo:</td>
+                                <td class="critical-value">-689.84 ton.mm (-0.69 t.m)</td>
+                            </tr>
+                        </table>
+                        <div class="technical-analysis">
+                            <p><strong>Características:</strong> Momento positivo máximo localizado cerca del centro del vano izquierdo (+3.03 t.m). Momento negativo máximo en el apoyo exterior izquierdo (-0.69 t.m).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Momento por Carga Viva -->
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="momento_viva.jpg" alt="Momento por Carga Viva">
+                        <button class="fullscreen-btn" onclick="openFullscreen('momento_viva.jpg')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="image-caption">Distribución de momentos - Carga viva</div>
+                    <div class="analysis-details">
+                        <h4>Análisis Técnico</h4>
+                        <table class="data-table">
+                            <tr>
+                                <td>Descripción:</td>
+                                <td>Momentos generados por cargas variables</td>
+                            </tr>
+                            <tr>
+                                <td>Máximo Positivo:</td>
+                                <td class="critical-value">+5908.02 ton.mm (+5.91 t.m)</td>
+                            </tr>
+                            <tr>
+                                <td>Máximo Negativo:</td>
+                                <td class="critical-value">-2278.61 ton.mm (-2.28 t.m)</td>
+                            </tr>
+                        </table>
+                        <div class="technical-analysis">
+                            <p><strong>Características:</strong> Momento positivo máximo en el centro del vano izquierdo (+5.91 t.m). Momento negativo máximo en el apoyo exterior izquierdo (-2.28 t.m). Mayor rango de momentos que en carga muerta.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Momento por Carga de Servicio -->
+                <div class="image-card">
+                    <div class="image-container">
+                        <img src="momento_servicio.jpg" alt="Momento por Carga de Servicio">
+                        <button class="fullscreen-btn" onclick="openFullscreen('momento_servicio.jpg')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="image-caption">Distribución de momentos - Carga de servicio</div>
+                    <div class="analysis-details">
+                        <h4>Análisis Técnico</h4>
+                        <table class="data-table">
+                            <tr>
+                                <td>Descripción:</td>
+                                <td>Suma de momentos por carga muerta y viva (condiciones de uso normal)</td>
+                            </tr>
+                            <tr>
+                                <td>Máximo Positivo:</td>
+                                <td class="critical-value">+8956.8 ton.mm (+8.96 t.m)</td>
+                            </tr>
+                            <tr>
+                                <td>Máximo Negativo:</td>
+                                <td class="critical-value">-2968.48 ton.mm (-2.97 t.m)</td>
+                            </tr>
+                        </table>
+                        <div class="technical-analysis">
+                            <p><strong>Características:</strong> Caso crítico para diseño a flexión. Momento máximo en toda la estructura (+8.96 t.m) ubicado en el centro del vano derecho. Momento negativo máximo (-2.97 t.m) en el apoyo exterior izquierdo. Los momentos en el domo central son mucho menores (-26.35 a +4.72 ton.mm).</p>
                         </div>
                     </div>
                 </div>
@@ -1434,97 +1547,6 @@
         </div>
     </section>
     
-    <!-- Sección de Reacciones -->
-    <section id="reacciones" class="fade-in">
-        <div class="section-title">
-            <h2>Reacciones en Apoyos</h2>
-            <p>Análisis de fuerzas en los apoyos bajo diferentes condiciones de carga</p>
-        </div>
-        
-        <div class="content-card">
-            <div class="image-grid">
-                <div class="image-card">
-                    <div class="image-container">
-                        <img src="reacciones_muerta.jpg" alt="Reacciones muerta">
-                        <button class="fullscreen-btn" onclick="openFullscreen('reacciones_muerta.jpg')">
-                            <i class="fas fa-expand"></i>
-                        </button>
-                    </div>
-                    <div class="image-caption">Reacciones - Carga muerta</div>
-                    <div class="analysis-details">
-                        <h4>Análisis Técnico</h4>
-                        <table class="data-table">
-                            <tr>
-                                <td>Descripción:</td>
-                                <td>Reacciones bajo carga muerta permanente</td>
-                            </tr>
-                            <tr>
-                                <td>Valor máximo:</td>
-                                <td class="critical-value">3.99</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                
-                <div class="image-card">
-                    <div class="image-container">
-                        <img src="reacciones_viva.jpg" alt="Reacciones viva">
-                        <button class="fullscreen-btn" onclick="openFullscreen('reacciones_viva.jpg')">
-                            <i class="fas fa-expand"></i>
-                        </button>
-                    </div>
-                    <div class="image-caption">Reacciones - Carga viva</div>
-                    <div class="analysis-details">
-                        <h4>Análisis Técnico</h4>
-                        <table class="data-table">
-                            <tr>
-                                <td>Descripción:</td>
-                                <td>Reacciones por carga viva</td>
-                            </tr>
-                            <tr>
-                                <td>Valor máximo:</td>
-                                <td class="critical-value">7.34</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                
-                <div class="image-card">
-                    <div class="image-container">
-                        <img src="reacciones_servicio.jpg" alt="Reacciones servicio">
-                        <button class="fullscreen-btn" onclick="openFullscreen('reacciones_servicio.jpg')">
-                            <i class="fas fa-expand"></i>
-                        </button>
-                    </div>
-                    <div class="image-caption">Reacciones - Carga de servicio</div>
-                    <div class="analysis-details">
-                        <h4>Análisis Técnico</h4>
-                        <table class="data-table">
-                            <tr>
-                                <td>Descripción:</td>
-                                <td>Reacciones de servicio (combinación de cargas)</td>
-                            </tr>
-                            <tr>
-                                <td>Valor máximo:</td>
-                                <td class="critical-value">11.36</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                
-                <div class="image-card">
-                    <div class="image-container">
-                        <img src="reacciones_general.jpg" alt="Reacciones general">
-                        <button class="fullscreen-btn" onclick="openFullscreen('reacciones_general.jpg')">
-                            <i class="fas fa-expand"></i>
-                        </button>
-                    </div>
-                    <div class="image-caption">Reacciones Generales</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <!-- Sección de Videos -->
     <section id="videos" class="fade-in">
         <div class="section-title">
@@ -1663,8 +1685,8 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">INFORME ESTRUCTURAL</div>
-            <p>Proyecto desarrollado en Cajamarca - Análisis de cubierta metálica</p>
-            <p>© 2023 - Todos los derechos reservados</p>
+            <p>Proyecto desarrollado por UTEC  - Análisis de cubierta metálica</p>
+            <p>© 2025 - Todos los derechos reservados jarlin</p>
             <p>Unidades: Toneladas (Ton) y Milímetros (mm)</p>
             <div class="sap-logo">
                 <i class="fas fa-cube"></i> Análisis realizado con SAP 2000 v25
